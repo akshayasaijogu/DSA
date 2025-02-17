@@ -1,0 +1,21 @@
+
+class Geeks {
+    static void printTable(int n) {
+        int multiplier = 10;
+        
+        // Check if n is 0; if so, exit the method
+        if (n == 0) {
+            return;
+        }
+        
+        // Loop to print the table in reverse order
+        while (multiplier > 0) {
+            System.out.print(n * multiplier);
+            if (multiplier > 1) {
+                System.out.print(" ");  // Add a space between the numbers
+            }
+            multiplier--;
+        }
+        System.out.println();  // Move to the next line after printing the table
+    }
+}
