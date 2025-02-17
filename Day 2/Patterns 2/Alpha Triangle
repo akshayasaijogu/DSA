@@ -1,0 +1,14 @@
+public class Solution {
+    public static void alphaTriangle(int n) {
+        // Write your code here
+        for(int i=1;i<=n;i++){
+            
+            for(int j=1;j<=i;j++){
+                char ch = (char) ('A'+n-j);
+                System.out.print(ch+" ");
+                ch--;
+            }
+            System.out.println();
+        }
+    }
+}
