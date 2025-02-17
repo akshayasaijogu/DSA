@@ -1,0 +1,22 @@
+public class Solution {
+    public static void getNumberPattern(int N) {
+        // Write your code here.
+        int size = 2 * N - 1; 
+        int[][] matrix = new int[size][size];
+        
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                int value = N - Math.min(
+                    Math.min(i, j),
+                    Math.min(size - 1 - i, size - 1 - j));
+                matrix[i][j] = value;
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
