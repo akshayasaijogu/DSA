@@ -1,0 +1,16 @@
+class Solution {
+    public void sortColors(int[] org) {
+            int countarr[] = new int[3];
+            for(int i=0;i<org.length;i++){
+              countarr[org[i]]++;
+              }
+              int j=0;
+              for(int i=0;i<countarr.length;i++){
+                  while(countarr[i]>0){
+                    org[j]=i;
+                    j++;
+                    countarr[i]--;
+                  }
+              }
+            }
+        }
